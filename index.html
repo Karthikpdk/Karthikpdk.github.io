@@ -21,8 +21,7 @@
         }
 
         .active-link {
-            border-bottom-width: 2px;
-            border-color: #FCD34D;
+            border-bottom: 2px solid #FCD34D;
             color: #FCD34D;
         }
     </style>
@@ -34,13 +33,13 @@
     <nav class="bg-violet-800 text-white px-6 py-4 shadow-md fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold">Palnati Dinesh Karthik</h1>
-            <ul class="flex space-x-6 text-lg">
-                <li><a href="#home" class="hover:text-yellow-300 border-b-2 border-yellow-300">Home</a></li>
-                <li><a href="#about" class="hover:text-yellow-300">About</a></li>
-                <li><a href="#skills" class="hover:text-yellow-300">Skills</a></li>
-                <li><a href="#resume" class="hover:text-yellow-300">Resume</a></li>
-                <li><a href="#projects" class="hover:text-yellow-300">Projects</a></li>
-                <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+            <ul id="menu" class="flex space-x-6 text-lg">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -78,13 +77,22 @@
         <p class="text-lg leading-relaxed text-gray-700">
             Hi, I am a passionate learner and aspiring <strong>Student</strong> interested in creating responsive and
             intuitive web applications.<br><br>
-            I am currently learning <strong>Java Programming</strong> and also<strong> HTML, CSS, JavaScript</strong> to
-            build a strong
-            foundation in web development.<br><br>
+            I am currently learning <strong>Java Programming</strong> and also <strong>HTML, CSS, JavaScript</strong> to
+            build a strong foundation in web development.<br><br>
             I am currently open to <strong>internships, freelance projects, or full-time opportunities</strong> where I
             can grow, collaborate, and contribute meaningfully to an organization.
             <a href="#contact" class="text-purple-700 hover:underline">Get in touch</a> — let’s build something great!
         </p>
+
+        <div class="mt-10 text-left text-gray-800">
+            <h3 class="text-2xl font-semibold mb-4 text-center mt-10">📌 Additional Info</h3>
+            <ul class="list-disc list-inside space-y-2 text-lg">
+                <li><strong>Profile:</strong> Web Developer </li>
+                <li><strong>Domain:</strong> App Development, Digital Marketing with AI</li>
+                <li><strong>Languages:</strong> English, Telugu, Hindi</li>
+                <li><strong>Interests:</strong> Workouts, Coding, Learning</li>
+            </ul>
+        </div>
 
         <h2 class="text-3xl font-bold mb-4 mt-20">🧾 Professional Summary</h2>
         <p class="text-lg leading-relaxed text-gray-700">
@@ -108,6 +116,7 @@
         <div class="mb-12">
             <h3 class="text-xl font-semibold text-purple-700">10th Class Education</h3>
             <p>K.T.R High School | <span class="italic">2019 – 2020</span></p>
+            <p class="text-gray-600">CGPA: <strong>9.8</strong></p>
         </div>
     </section>
 
@@ -124,20 +133,6 @@
             <span class="bg-red-100 text-red-800 px-4 py-2 rounded-full">GitHub</span>
             <span class="bg-yellow-200 text-yellow-900 px-4 py-2 rounded-full">VS Code</span>
         </div>
-
-        <h3 class="text-2xl font-semibold text-purple-700 mb-4">🛠️ Technical Skills</h3>
-        <ul class="list-disc list-inside text-lg space-y-2">
-            <li><strong>Languages:</strong> Java and Python for backend logic and algorithmic problem-solving.</li>
-            <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript, Tailwind CSS, React for responsive UIs.</li>
-            <li><strong>Tools:</strong> Git & GitHub, SQL, and VS Code as my dev environment.</li>
-        </ul>
-
-        <h3 class="text-2xl font-semibold text-purple-700 mt-10 mb-4">🤝 Soft Skills</h3>
-        <ul class="list-disc list-inside text-lg space-y-2">
-            <li><strong>Problem Solving:</strong> Logical breakdown of tasks.</li>
-            <li><strong>Critical Thinking:</strong> Able to analyze and find practical solutions.</li>
-            <li><strong>Team Collaboration:</strong> Great communicator and team player.</li>
-        </ul>
     </section>
 
     <!-- Resume Section -->
@@ -161,44 +156,31 @@
     <section id="projects" class="py-20 px-6 bg-violet-100 max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold text-center mb-12 text-purple-700">📂 Featured Projects</h2>
         <div class="grid gap-8 md:grid-cols-2">
-            <!-- Project 1 -->
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">🌐 Online Portfolio Website</h3>
-                <p class="text-gray-700 mb-2">
-                    A personal project to showcase my portfolio, resume, and projects. Built using HTML, CSS,
-                    JavaScript.
-                </p>
+                <p class="text-gray-700 mb-2">A personal project to showcase my portfolio, resume, and projects. Built
+                    using HTML, CSS, JavaScript.</p>
             </div>
-            <!-- Project 2 -->
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">🗑️ Smart Dustbin Management System</h3>
-                <p class="text-gray-700 mb-4">
-                    A mini project using sensors and microcontrollers to track and notify waste levels using Arduino.
-                </p>
+                <p class="text-gray-700 mb-4">Mini project using sensors and Arduino to monitor waste levels.</p>
                 <button onclick="document.getElementById('dustbinImage').classList.toggle('hidden')"
                     class="text-indigo-500 hover:underline">📷 View Image</button>
-                <img id="dustbinImage" src="images/dustbin.jpg" alt="Smart Dustbin Image"
+                <img id="dustbinImage" src="images/dustbin.jpg" alt="Smart Dustbin"
                     class="mt-4 rounded-lg shadow-md hidden" />
             </div>
-            <!-- Project 3 -->
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">📊 Crime Rate Prediction (ML)</h3>
-                <p class="text-gray-700 mb-4">
-                    Academic project applying ML models to predict crime trends using historical datasets.
-                </p>
+                <p class="text-gray-700 mb-4">Academic project applying ML models to predict crime trends.</p>
                 <a href="files/crime prediction.pdf" target="_blank" class="text-indigo-500 hover:underline">📄 View
                     Report (PDF)</a>
             </div>
-            <!-- Project 4 -->
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">❄️ Portable Mini Cooler</h3>
-                <p class="text-gray-700 mb-2">
-                    A mini hardware project using basic electronics for a portable cooling device.
-                </p>
+                <p class="text-gray-700 mb-2">Mini hardware project using basic electronics for cooling.</p>
                 <button onclick="document.getElementById('coolerImage').classList.toggle('hidden')"
                     class="text-indigo-500 hover:underline">📷 View Image</button>
-                <img id="coolerImage" src="images/cooler.jpg" alt="Portable Mini Cooler Image"
-                    class="mt-4 rounded-lg shadow-md hidden" />
+                <img id="coolerImage" src="images/cooler.jpg" alt="Cooler" class="mt-4 rounded-lg shadow-md hidden" />
             </div>
         </div>
     </section>
@@ -206,9 +188,7 @@
     <!-- Contact Section -->
     <section id="contact" class="pt-28 px-6 bg-violet-200 max-w-3xl mx-auto text-center">
         <h2 class="text-4xl font-bold mb-4">📞 Contact Me</h2>
-        <p class="mb-6 text-lg text-gray-700">
-            Feel free to reach out via email or connect on social media:
-        </p>
+        <p class="mb-6 text-lg text-gray-700">Feel free to reach out via email or connect on social media:</p>
         <ul class="space-y-4 text-lg text-left mx-auto w-fit">
             <li class="flex items-center space-x-3">
                 <img src="https://img.icons8.com/fluency/48/address.png" class="w-6 h-6" alt="Address Icon" />
@@ -242,18 +222,34 @@
             </li>
         </ul>
     </section>
-    <!-- Contact Section -->
-    <section id="contact" class="pt-28 px-6 bg-violet-200 max-w-3xl mx-auto text-center">
-        <!-- Contact content -->
-    </section>
 
     <!-- Footer -->
     <footer class="bg-violet-800 text-white text-center py-4 mt-10">
-        <p class="text-sm">
-            &copy; 2025 Palnati Dinesh Karthik. All rights reserved.
-        </p>
+        <p class="text-sm">&copy; 2025 Palnati Dinesh Karthik. All rights reserved.</p>
     </footer>
 
+    <!-- Active link scroll script -->
+    <script>
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active-link");
+                if (link.getAttribute("href").includes(current)) {
+                    link.classList.add("active-link");
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
