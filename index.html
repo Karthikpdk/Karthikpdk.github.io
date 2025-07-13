@@ -179,13 +179,16 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6 bg-violet-100 max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold text-center mb-12 text-purple-700">📂 Featured Projects</h2>
+
         <div class="grid gap-8 md:grid-cols-2">
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">🌐 Online Portfolio Website</h3>
-                <p class="text-gray-700 mb-2">A personal project to showcase my portfolio, resume, and projects.
-                    Built
-                    using HTML, CSS, JavaScript.</p>
+                <p class="text-gray-700 mb-2">
+                    A personal project to showcase my portfolio, resume, and projects. Built using HTML, CSS,
+                    JavaScript.
+                </p>
             </div>
+
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">🗑️ Smart Dustbin Management System</h3>
                 <p class="text-gray-700 mb-4">Mini project using sensors and Arduino to monitor waste levels.</p>
@@ -194,12 +197,15 @@
                 <img id="dustbinImage" src="images/dustbin.jpg" alt="Smart Dustbin"
                     class="mt-4 rounded-lg shadow-md hidden" />
             </div>
+
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">📊 Crime Rate Prediction (ML)</h3>
                 <p class="text-gray-700 mb-4">Academic project applying ML models to predict crime trends.</p>
-                <a href="files/crime prediction.pdf" target="_blank" class="text-indigo-500 hover:underline">📄 View
-                    Report (PDF)</a>
+                <a href="files/crime prediction.pdf" target="_blank" class="text-indigo-500 hover:underline">
+                    📄 View Report (PDF)
+                </a>
             </div>
+
             <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
                 <h3 class="text-2xl font-bold mb-2">❄️ Portable Mini Cooler</h3>
                 <p class="text-gray-700 mb-2">Mini hardware project using basic electronics for cooling.</p>
@@ -207,8 +213,21 @@
                     class="text-indigo-500 hover:underline">📷 View Image</button>
                 <img id="coolerImage" src="images/cooler.jpg" alt="Cooler" class="mt-4 rounded-lg shadow-md hidden" />
             </div>
+
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
+                <h3 class="text-2xl font-bold mb-2">🐍 Snake Game</h3>
+                <p class="text-gray-700 mb-4">A short timepass game for users who have free time to play.</p>
+                <button onclick="document.getElementById('snakeLink').classList.toggle('hidden')"
+                    class="text-indigo-500 hover:underline">📷 View Image</button>
+                <a id="snakeLink" href="https://karthikpdk.github.io/SnakeGamefortimepass/" target="_blank"
+                    class="hidden block mt-4">
+                    <img src="images/snakegame.jpg" alt="Snake Game Screenshot"
+                        class="rounded-lg shadow-md hover:opacity-90 transition" />
+                </a>
+            </div>
         </div>
     </section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 px-4 bg-violet-200 flex justify-center items-center">
